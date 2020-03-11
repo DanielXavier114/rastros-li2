@@ -15,3 +15,4 @@ typedef struct {
     int num_jogadas;
     int jogador_atual;
 } ESTADO;
+
