@@ -18,6 +18,7 @@ int verifica_movimentos(ESTADO *estado,COORDENADA c){
 }
 
 int jogar(ESTADO *estado, COORDENADA c){
+    printf("jogar %d %d\n", c.coluna, c.linha);
     if (verifica_movimentos(estado,c)){
 
     estado->tab[c.linha][c.coluna] = BRANCA;
