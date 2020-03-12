@@ -1,18 +1,43 @@
-//
-// Created by daniel on 10/03/20.
-//
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "camadadados.h"
-//isto e um teste
-typedef enum {VAZIO, BRANCA, PRETA} CASA;
-typedef struct {int coluna;int linha;} COORDENADA;
-typedef struct {COORDENADA jogador1;COORDENADA jogador2;} JOGADA;
-typedef JOGADA JOGADAS[32];
-typedef struct {
-    CASA tab[8][8];
-    COORDENADA ultima_jogada;
-    JOGADAS jogadas;
-    int num_jogadas;
-    int jogador_atual;
-} ESTADO;
 
+ESTADO *inicializar_estado()
+{
+    ESTADO *estadoJogo = (ESTADO *)malloc(sizeof(ESTADO));
+    estadoJogo->tab = {
+        {VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO},
+        {VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO},
+        {VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO},
+        {VAZIO, VAZIO, VAZIO, VAZIO, BRANCA, VAZIO, VAZIO, VAZIO},
+        {VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO},
+        {VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO},
+        {VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO},
+        {VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO}};
+    estadoJogo->ultima_jogada = {4, 3};
+    estadoJogo->jogadas = {};
+    estadoJogo->num_jogadas = 0;
+    estadoJogo->jogador_atual = 1;
+    return estadoJogo;
+}
+
+int obter_jogador_atual(ESTADO *estado)
+{
+    int jog;
+    jog = estado->jogador_atual;
+    return jog;
+}
+int obter_numero_de_jogadas(ESTADO *estado)
+{
+    int numJogadas;
+    numJogadas = estado->num_jogadas;
+
+    return numJogadas;
+}
+CASA obter_estado_casa(ESTADO *e, COORDENADA c)
+{
+    CASA casa;
+    casa = e->tab[c.linha][c.coluna];
+    return casa;
+}
