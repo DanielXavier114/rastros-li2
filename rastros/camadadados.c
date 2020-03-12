@@ -3,7 +3,7 @@
 //
 
 #include "camadadados.h"
-//isto 
+//isto e um teste
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 typedef struct {int coluna;int linha;} COORDENADA;
 typedef struct {COORDENADA jogador1;COORDENADA jogador2;} JOGADA;
