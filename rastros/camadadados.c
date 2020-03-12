@@ -2,27 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "camadadados.h"
-<<<<<<< HEAD
 
-ESTADO *inicializar_estado(){
-
-}
-
-int obter_jogador_atual(ESTADO *estado){
-
-}
-
-int obter_numero_de_jogadas(ESTADO *estado){
-
-}
-
-CASA obter_estado_casa(ESTADO *e, COORDENADA c){
-
-}
-=======
->>>>>>> dc400e3f727a6ce428e8398cf088ec3bf13cdc8e
-=======
->>>>>>> b7eedccb4f55a9df610592d6df03760389437924
 
 ESTADO *inicializar_estado()
 {
