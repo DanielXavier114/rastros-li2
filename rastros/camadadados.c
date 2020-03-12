@@ -3,6 +3,7 @@
 #include <string.h>
 #include "camadadados.h"
 
+
 ESTADO *inicializar_estado()
 {
     ESTADO estadoJogo;
