@@ -16,17 +16,28 @@ int interpretador(ESTADO *e) {
     return 1;
 }
 
-void mostrar_tabuleiro(ESTADO estado){
-    for (int l;l<8;l++){
-        for(int c;c<8;l++){
-            if (l==0 && c==7) putchar('2');
-            else if (c==0 && l == 7) putchar('1');
+void mostrar_tabuleiro(ESTADO estado) {
+    int j, i;
+    for (j = 0; j <= 7; j++) {
+        for ( i = 0; i <= 7; i++) {
+            if (j == 7 && i == 0)
+                printf ("2");
+            else if (j == 0 && i == 7)
+                printf ("1");
             else {
-                if ((estado.tab[l][c]) == BRANCA) putchar ('*') ;
-                    else if (estado.tab[l][c] == VAZIO ) putchar ('.') ;
-                    else putchar('#');
+                switch (estado -> tab [j] [i]) {
+                    case PRETA:
+                        printf ("#");
+                        break;
+                    case VAZIO:
+                        printf (".");
+                        break;
+                    case BRANCA:
+                        printf ("*");
+                        break;
+                }
             }
-
         }
+        printf ("\n Efetue uma Jogada");
     }
 }
