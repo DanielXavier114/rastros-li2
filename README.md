@@ -1,6 +1,6 @@
 <h1>rastros-li2</h1>
 Projeto de implementação, em linguagem C, do jogo "Rastros" no âmbito da UC de Laboratórios de Informática II da Universidade do Minho
-
+</br> 
 Projeto desenvolvido por:
 </br>
 Grupo 6 do PL8
