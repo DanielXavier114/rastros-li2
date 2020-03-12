@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "camadadados.h"
-<<<<<<< HEAD
-//isto e um teste
+
 ESTADO *inicializar_estado(){
 
 }
